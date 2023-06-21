@@ -22,7 +22,7 @@ async function getWeatherData(city) {
     try {
         let response = await fetch(URL);
         if (!response.ok) {
-            weatherIcon.src = "/images/404.png";
+            weatherIcon.src = "./images/404.png";
         }
 
         let data = await response.json();
@@ -48,25 +48,25 @@ async function getWeatherData(city) {
 function setWeatherIcon(status) {
     switch (status) {
         case "Clear":
-            weatherIcon.src = "/images/clear.png";
+            weatherIcon.src = "./images/clear.png";
             break;
         case "Clouds":
-            weatherIcon.src = "/images/cloud.png";
+            weatherIcon.src = "./images/cloud.png";
             break;
         case "Haze":
-            weatherIcon.src = "/images/haze.png";
+            weatherIcon.src = "./images/haze.png";
             break;
         case "Mist":
-            weatherIcon.src = "/images/mist.png";
+            weatherIcon.src = "./images/mist.png";
             break;
         case "Rain":
-            weatherIcon.src = "/images/rain.png";
+            weatherIcon.src = "./images/rain.png";
             break;
         case "Snow":
-            weatherIcon.src = "/images/snow.png";
+            weatherIcon.src = "./images/snow.png";
             break;
         default:
-            weatherIcon.src = "/images/404.png";
+            weatherIcon.src = "./images/404.png";
             break;
     }
 }
